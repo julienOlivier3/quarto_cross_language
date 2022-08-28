@@ -2,7 +2,7 @@
 title: "Hello, Quarto"
 subtitle: "Cross-language coding"
 author: "Julian Oliver Dörr"
-format: gfm
+format: html
 editor: source
 engine: knitr
 ---

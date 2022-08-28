@@ -71,14 +71,13 @@ y_test_pred = classifier.predict(X_test)
 
 print(classification_report(y_test, y_test_pred))
 ```
-
                  precision    recall  f1-score   support
 
-         Adelie       1.00      1.00      1.00        22
-      Chinstrap       1.00      1.00      1.00        15
+         Adelie       0.92      1.00      0.96        22
+      Chinstrap       1.00      0.87      0.93        15
          Gentoo       1.00      1.00      1.00        30
 
-    avg / total       1.00      1.00      1.00        67
+    avg / total       0.97      0.97      0.97        67
 
 ## Conclusion
 
