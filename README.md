@@ -1,4 +1,11 @@
-# Hello, Quarto: Cross-language coding
+---
+title: "Hello, Quarto"
+subtitle: "Cross-language coding"
+author: "Julian Oliver Dörr"
+format: html
+editor: source
+engine: knitr
+---
 
 ## Quarto
 [Quarto](https://quarto.org/) weaves together narrative text and code to produce elegantly formatted output. Most interestingly, Quarto executes code written in different languages. The following gives an illustration of cross-language coding in Quarto (here using **`R`** and **`Python`** - other languages are supported as well).
@@ -22,7 +29,6 @@ pacman::p_load(tidyverse, palmerpenguins, reticulate)
 #| echo: true
 data(penguins, package = "palmerpenguins")
 penguins <- penguins[complete.cases(penguins),]
-
 ggplot(penguins, 
        aes(x = flipper_length_mm, y = bill_length_mm)) +
   geom_point(aes(color = species, shape = species)) +
@@ -70,10 +76,8 @@ Now, let us train a simple classifier using the `scikit-learn` module in **`Pyth
 y = penguins['species']
 X = penguins[['bill_length_mm',  'bill_depth_mm',  'flipper_length_mm', 'body_mass_g']]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 333)
-
 classifier = RandomForestClassifier().fit(X_train, y_train)
 y_test_pred = classifier.predict(X_test)
-
 print(classification_report(y_test, y_test_pred))
 ```
 
